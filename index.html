@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bony Aga — Foto & Videografi</title>
+    <meta name="description" content="Bony Aga Website — Jasa Foto & Videografi. Booking mudah, hasil profesional." />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config (optional tweaks) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        dark: '#0b1020',
+                    },
+                    fontFamily: {
+                        display: ['Inter', 'ui-sans-serif', 'system-ui'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkfQf0lCdu3I5K3r5Y6r5wQnA1Y9UqQvYF1h8l9p8EwH1QGkY8GKaD2wQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Simple lightbox using :target */
+        .lightbox:target {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-slate-800 font-display selection:bg-primary/20 selection:text-primary">
+    <!-- NAVBAR -->
+    <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#beranda" class="flex items-center gap-2 font-semibold text-slate-900">
+                   <span
+                        class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10 text-primary"><i
+                            class="fa-solid fa-camera"></i></span>
+                            <!-- <img src="assets/img/agafhoto.jpg" alt="Foto profil pengguna" class="foto-profil"> -->
+                    <span class="tracking-blue">Bony Agafoto</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-6 text-sm">
+                    <a href="#beranda" class="nav-link hover:text-primary">Beranda</a>
+                    <a href="#tentang" class="nav-link hover:text-primary">Tentang Kami</a>
+                    <a href="#produk" class="nav-link hover:text-primary">Product</a>
+                    <a href="#layanan" class="nav-link hover:text-primary">Layanan</a>
+                    <a href="#video" class="nav-link hover:text-primary">Video</a>
+                    <a href="#foto" class="nav-link hover:text-primary">Foto</a>
+                    <a href="#kontak" class="nav-link btn btn--ghost">Kontak</a>
+                    
+                </nav>
+                <button id="menuBtn"
+                    class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-200 text-slate-700 ">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+            <div class="max-w-7xl mx-auto px-4 py-3 grid gap-2 text-sm">
+                <a href="#beranda" class="py-2">Beranda</a>
+                <a href="#tentang" class="py-2">Tentang Kami</a>
+                <a href="#produk" class="py-2">Product</a>
+                <a href="#layanan" class="py-2">Layanan</a>
+                <a href="#video" class="py-2">Video</a>
+                <a href="#foto" class="py-2">Foto</a>
+                <a href="#kontak" class="py-2">Kontak</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO / BERANDA -->
+        <section id="beranda" class="relative pt-24">
+            <div
+                class="absolute inset-0 -z-10 bg-[url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center">
+            </div>
+            <div class="absolute inset-0 -z-10 bg-gradient-to-b from-black/50 via-black/40 to-white"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 items-center min-h-[70vh] gap-8">
+                    <div class="text-white py-16">
+                        <h1 class="text-4xl sm:text-5xl font-bold leading-tight">Abadikan Momen Terbaik Anda
+                            <span class="block text-primary">Foto & Videografi Profesional</span>
+                        </h1>
+                        <p class="mt-4 text-white/90 max-w-xl">Bony Aga menghadirkan hasil berkualitas untuk pernikahan,
+                            event, produk, hingga konten kreatif. Booking cepat, hasil memuaskan.</p>
+                        <div class="mt-6 flex flex-wrap items-center gap-3">
+                            <a href="#produk"
+                                class="inline-flex items-center justify-center rounded-2xl px-5 py-3 bg-primary text-white shadow hover:opacity-90">Lihat
+                                Paket</a>
+                            <a href="#kontak"
+                                class="inline-flex items-center justify-center rounded-2xl px-5 py-3 bg-white text-slate-900 shadow hover:bg-slate-100">Konsultasi
+                                Gratis</a>
+                        </div>
+                    </div>
+                    <div class="relative hidden lg:block">
+                      
+                                            <div class="aspect-video overflow-hidden rounded-2xl border border-slate-200">
+                                                <iframe class="w-full h-full" src="assets/video/wisudasttb.mp4" title="wisudasttb.mp4" frameborder="0"
+                                                    allowfullscreen></iframe>
+                                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TENTANG KAMI -->
+        <section id="tentang" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold tracking-tight">Tentang Kami</h2>
+                        <p class="mt-4 text-slate-600">Kami adalah tim kreatif yang berfokus pada penceritaan visual.
+                            Sejak 2018, kami telah membantu ratusan klien mengabadikan momen penting serta meningkatkan
+                            nilai brand melalui visual yang kuat dan autentik.</p>
+                        <ul class="mt-6 grid sm:grid-cols-2 gap-4 text-sm">
+                            <li class="flex items-start gap-3"><span class="text-primary mt-1"><i
+                                        class="fa-solid fa-circle-check"></i></span> Wedding & Engagement</li>
+                            <li class="flex items-start gap-3"><span class="text-primary mt-1"><i
+                                        class="fa-solid fa-circle-check"></i></span> Event & Dokumentasi</li>
+                            <li class="flex items-start gap-3"><span class="text-primary mt-1"><i
+                                        class="fa-solid fa-circle-check"></i></span> Produk & Komersial</li>
+                            <li class="flex items-start gap-3"><span class="text-primary mt-1"><i
+                                        class="fa-solid fa-circle-check"></i></span> Konten Media Sosial</li>
+                        </ul>
+                    </div>
+                <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-white/20 shadow-2xl">
+                    <img src="assets/img/fotoshot.jpg" alt="Tim Bony Aga saat pemotretan" class="w-full h-full object-cover" />
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT / PACKAGES -->
+        <section id="produk" class="py-24 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="text-3xl font-bold">Paket Product</h2>
+                    <p class="mt-3 text-slate-600">Pilihan paket fleksibel untuk kebutuhan foto dan video Anda. Dapat
+                        dikustom sesuai brief.</p>
+                </div>
+                <div class="mt-10 grid md:grid-cols-3 gap-6">
+                    <!-- Paket Basic -->
+                    <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition">
+                        <h3 class="text-xl font-semibold">Basic</h3>
+                        <p class="mt-1 text-slate-500">Cocok untuk sesi singkat.</p>
+                        <div class="mt-4 text-3xl font-bold">Rp 1.500K</div>
+                        <ul class="mt-4 space-y-2 text-sm">
+                            <li><i class="fa-regular fa-circle-check text-primary mr-2"></i> 2 Jam pemotretan</li>
+                            <li><i class="fa-regular fa-circle-check text-primary mr-2"></i> 20 Foto edit basic</li>
+                            <li><i class="fa-regular fa-circle-check text-primary mr-2"></i> 1 Videografi pendek
+                                (30-60s)</li>
+                        </ul>
+                        <a href="#kontak"
+                            class="mt-6 inline-flex justify-center w-full rounded-2xl bg-primary px-4 py-2.5 text-white">Pesan
+                            Paket</a>
+                    </div>
+                    <!-- Paket Pro -->
+                    <div
+                        class="relative rounded-3xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition ring-2 ring-primary">
+                        <div
+                            class="absolute -top-3 right-6 text-xs bg-primary text-white px-3 py-1 rounded-full shadow">
+                            Terlaris</div>
+                        <h3 class="text-xl font-semibold">Pro</h3>
+                        <p class="mt-1 text-slate-500">Untuk kebutuhan komersial.</p>
+                        <div class="mt-4 text-3xl font-bold">Rp 3.900K</div>
+                        <ul class="mt-4 space-y-2 text-sm">
+                            <li><i class="fa-regular fa-circle-check text-primary mr-2"></i> 4 Jam foto + video</li>
+                            <li><i class="fa-regular fa-circle-check text-primary mr-2"></i> 50 Foto edit advance</li>
+                            <li><i class="fa-regular fa-circle-check text-primary mr-2"></i> 1 Video highlight (1-3 mnt)
+                            </li>
+                            <li><i class="fa-regular fa-circle-check text-primary mr-2"></i> Drone (opsional)</li>
+                        </ul>
+                        <a href="#kontak"
+                            class="mt-6 inline-flex justify-center w-full rounded-2xl bg-primary px-4 py-2.5 text-white">Pesan
+                            Paket</a>
+                    </div>
+                    <!-- Paket Premium -->
+                    <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition">
+                        <h3 class="text-xl font-semibold">Premium</h3>
+                        <p class="mt-1 text-slate-500">Produksi skala besar.</p>
+                        <div class="mt-4 text-3xl font-bold">Rp 7.500K</div>
+                        <ul class="mt-4 space-y-2 text-sm">
+                            <li><i class="fa-regular fa-circle-check text-primary mr-2"></i> 8 Jam liputan</li>
+                            <li><i class="fa-regular fa-circle-check text-primary mr-2"></i> 100+ Foto edit pro</li>
+                            <li><i class="fa-regular fa-circle-check text-primary mr-2"></i> 1 Video cinematic (3-5 mnt)
+                            </li>
+                            <li><i class="fa-regular fa-circle-check text-primary mr-2"></i> Color grading, SFX & musik
+                            </li>
+                        </ul>
+                        <a href="#kontak"
+                            class="mt-6 inline-flex justify-center w-full rounded-2xl bg-primary px-4 py-2.5 text-white">Pesan
+                            Paket</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LAYANAN -->
+<section id="layanan" class="py-20 bg-gray-100">
+    <div class="max-w-6xl mx-auto text-center mb-10">
+        <h3 class="text-3xl font-bold mb-6">Layanan Kami</h3>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+
+        <div class="bg-white shadow-md p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+            <i class="fa-solid fa-camera-retro text-4xl text-black mb-4"></i>
+            <h4 class="font-bold text-xl mb-2">Fotografi</h4>
+            <p>Jasa pemotretan untuk event, wedding, produk, hingga personal branding.</p>
+        </div>
+
+        <div class="bg-white shadow-md p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+            <i class="fa-solid fa-clapperboard text-4xl text-black mb-4"></i>
+            <h4 class="font-bold text-xl mb-2">Videografi</h4>
+            <p>Dokumentasi video profesional dengan editing sinematik.</p>
+        </div>
+
+        <div class="bg-white shadow-md p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
+            <i class="fa-solid fa-helicopter text-4xl text-black mb-4"></i>
+            <h4 class="font-bold text-xl mb-2">Drone</h4>
+            <p>Pemotretan & perekaman udara dengan kualitas tinggi.</p>
+        </div>
+
+        <div class="bg-white shadow-md p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="400">
+            <i class="fa-solid fa-photo-film text-4xl text-black mb-4"></i>
+            <h4 class="font-bold text-xl mb-2">Editing</h4>
+            <p>Proses editing foto & video dengan hasil profesional.</p>
+        </div>
+
+        <div class="bg-white shadow-md p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="500">
+            <i class="fa-solid fa-wifi text-4xl text-black mb-4"></i>
+            <h4 class="font-bold text-xl mb-2">Live Streaming</h4>
+            <p>Layanan live streaming event dengan kualitas HD.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Tombol WhatsApp -->
+<a href="https://wa.me/62 852-4312-5271" target="_blank"
+    class="fixed bottom-6 right-6 bg-green-300 text-white p-4 rounded-full shadow-lg hover:bg-green-300">
+    <i class="fab fa-whatsapp text-2xl text-black"></i>
+</a>
+
+<!-- Back to Top -->
+<a href="#beranda"
+    class="fixed bottom-6 left-6 bg-emerald-600 text-white p-3 rounded-full shadow-lg hover:bg-emerald-700">
+    <i class="fa-solid fa-arrow-up text-blue"></i>
+</a>
+
+        <!-- VIDEO -->
+        <section id="video" class="py-24 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="text-3xl font-bold">Video</h2>
+                    <p class="mt-3 text-slate-600">Kompilasi beberapa karya video (sematkan link YouTube/Vimeo Anda).
+                    </p>
+                </div>
+                <div class="mt-10 grid md:grid-cols-2 gap-6">
+                    <div class="aspect-video overflow-hidden rounded-2xl border border-slate-200">
+                        <iframe class="w-full h-full" src="assets/video/kampung.mp4" title="kampung.mp4 "
+                            frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="aspect-video overflow-hidden rounded-2xl border border-slate-200">
+                        <iframe class="w-full h-full" src="assets/video/wisudasttb.mp4" title="wisudasttb.mp4"
+                            frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOTO / GALLERY -->
+        <section id="foto" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="text-3xl font-bold">Foto</h2>
+                    <p class="mt-3 text-slate-600">Galeri karya pilihan. Klik untuk melihat lebih besar.</p>
+                </div>
+                <div class="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <!-- Each image opens a lightbox using #id target -->
+                    <a href="#img1" class="group block overflow-hidden rounded-2xl border border-slate-200">
+                        <img src="assets/img/agafhoto.jpg"
+                            alt=" " class="w-full h-40 md:h-48 object-cover group-hover:scale-105 transition" />
+                    </a>
+                    <a href="#img2" class="group block overflow-hidden rounded-2xl border border-slate-200">
+                        <img src="assets/img/back.jpg"
+                            alt=" " class="w-full h-40 md:h-48 object-cover group-hover:scale-105 transition" />
+                    </a>
+                    <a href="#img3" class="group block overflow-hidden rounded-2xl border border-slate-200">
+                        <img src="assets/img/kogoya.jpg"
+                            alt=" " class="w-full h-40 md:h-48 object-cover group-hover:scale-105 transition" />
+                    </a>
+                    <a href="#img4" class="group block overflow-hidden rounded-2xl border border-slate-200">
+                        <img src="assets/img/pemuda.jpg"
+                            alt=" " class="w-full h-40 md:h-48 object-cover group-hover:scale-105 transition" />
+                    </a>
+                </div>
+
+                <!-- Lightboxes -->
+                <div id="img1" class="lightbox hidden fixed inset-0 bg-black/90 z-50 items-center justify-center p-6">
+                    <a href="#foto" class="absolute top-4 right-4 text-white text-2xl"><i
+                            class="fa-solid fa-xmark"></i></a>
+                    <img src="assets/img/agafhoto.jpg"
+                        class="max-h-[85vh] rounded-2xl" alt="" />
+                </div>
+                <div id="img2" class="lightbox hidden fixed inset-0 bg-black/90 z-50 items-center justify-center p-6">
+                    <a href="#foto" class="absolute top-4 right-4 text-white text-2xl"><i
+                            class="fa-solid fa-xmark"></i></a>
+                    <img src="assets/img/back.jpg"
+                        class="max-h-[85vh] rounded-2xl" alt="" />
+                </div>
+                <div id="img3" class="lightbox hidden fixed inset-0 bg-black/90 z-50 items-center justify-center p-6">
+                    <a href="#foto" class="absolute top-4 right-4 text-white text-2xl"><i
+                            class="fa-solid fa-xmark"></i></a>
+                    <img src="assets/img/kogoya.jpg"
+                        class="max-h-[85vh] rounded-2xl" alt="" />
+                </div>
+                <div id="img4" class="lightbox hidden fixed inset-0 bg-black/90 z-50 items-center justify-center p-6">
+                    <a href="#foto" class="absolute top-4 right-4 text-white text-2xl"><i
+                            class="fa-solid fa-xmark"></i></a>
+                    <img src="assets/img/pemuda.jpg"
+                        class="max-h-[85vh] rounded-2xl" alt="" />
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTAK -->
+        <section id="kontak" class="py-24 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div>
+                        <h2 class="text-3xl font-bold">Kontak</h2>
+                        <p class="mt-3 text-slate-600">Silakan tinggalkan pesan, tim kami akan merespons secepatnya.</p>
+                        <form class="mt-6 grid grid-cols-1 gap-4">
+                            <input type="text" placeholder="Nama"
+                                class="rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:ring-2 focus:ring-primary"
+                                required />
+                            <input type="email/bonnykogoya30@gmail.com" placeholder="Email"
+                                class="rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:ring-2 focus:ring-primary"
+                                required />
+                            <textarea rows="5" placeholder="Pesan"
+                                class="rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:ring-2 focus:ring-primary"
+                                required></textarea>
+                            <button type="submit" class="rounded-2xl bg-primary text-white px-5 py-3">Kirim
+                                Pesan</button>
+                        </form>
+                        <div class="mt-6 text-sm text-slate-600 space-y-1">
+                            <p><i class="fa-solid fa-location-dot mr-2 text-primary"></i> Jl. Perumnas 2 Waena Asrama Putra Lanny Jaya 
+                            </p>
+                            <p><i class="fa-solid fa-envelope mr-2 text-primary"></i> bonnykogoya30@gmail.com</p>
+                            <p><i class="fa-solid fa-phone mr-2 text-primary"></i> 62852-4312-5271</p>
+                        </div>
+                    </div>
+                    <div class="rounded-3xl overflow-hidden border border-slate-200">
+                        <iframe title="Lokasi" class="w-full h-[360px]"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.7411680349605!2d140.64226337405515!3d-2.590457838440401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf519caed7e69%3A0xf2a8b33e4ac8583d!2sASRAMA%20MAHASISWA%20PUTRA%20LANNY%20JAYA!5e0!3m2!1sid!2sid!4v1756057011059!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-3 gap-8 items-center">
+            <div>
+                <div class="flex items-center gap-2 font-semibold text-slate-900">
+                    <span
+                        class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10 text-primary"><i
+                            class="fa-solid fa-camera"></i></span>
+                    <span>Bony Aga</span>
+                </div>
+                <p class="mt-2 text-sm text-slate-600">Foto & Videografi — Mengabadikan cerita Anda dengan visual
+                    terbaik.</p>
+            </div>
+            <div class="text-sm">
+                <h4 class="font-semibold">Menu</h4>
+                <ul class="mt-2 grid grid-cols-2 gap-2">
+                    <li><a href="#beranda" class="hover:text-primary">Beranda</a></li>
+                    <li><a href="#tentang" class="hover:text-primary">Tentang Kami</a></li>
+                    <li><a href="#produk" class="hover:text-primary">Product</a></li>
+                    <li><a href="#layanan" class="hover:text-primary">Layanan</a></li>
+                    <li><a href="#video" class="hover:text-primary">Video</a></li>
+                    <li><a href="#foto" class="hover:text-primary">Foto</a></li>
+                    <li><a href="#kontak" class="hover:text-primary">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="text-sm">
+                <h4 class="font-semibold">Ikuti Kami</h4>
+                <div class="mt-2 flex gap-3 text-slate-600">
+                    <a href="#instagram" aria-label="Instagram" class="hover:text-primary"><i   class="fa-brands fa-instagram"></i></a>
+                    <a href="#youtube" aria-label="YouTube" class="hover:text-secondary"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#tiktok" aria-label="TikTok" class="hover:text-primary"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#facebook" aria-label="Facebook" class="btn-btn-primary"><i class="fa-brands fa-square-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-slate-200 py-6 text-center text-xs text-slate-500">© <span id="year"></span> Bony
+            Aga. All rights reserved.</div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a id="whatsappBtn"
+        href="https://api.whatsapp.com/send?phone=6281234567890&text=Halo%20Bony%20Aga%2C%20saya%20ingin%20konsultasi%20jasa%20foto%20%26%20video"
+        target="_blank" rel="noopener"
+        class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full px-4 py-3 shadow-lg bg-green-500 text-white hover:bg-green-600">
+        <i class="fa-brands fa-whatsapp text-x"></i>
+        <span class="hidden sm:inline">WhatsApp</span>
+    </a>
+
+    <!-- Tambahkan CDN Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+
+    <!-- Back to Top -->
+    <button id="toTop"
+        class="hidden fixed bottom-5 left-5 z-50 w-11 h-11 rounded-full border border-slate-200 bg-white shadow text-slate-700"><i
+            class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- JS: Mobile menu, active link, year, toTop -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        // Active link on scroll
+        const sections = ['beranda', 'tentang', 'produk', 'layanan', 'video', 'foto', 'kontak'];
+        const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(a => a.classList.remove('text-primary'));
+                    const id = entry.target.getAttribute('id');
+                    const active = navLinks.find(a => a.getAttribute('href') === `#${id}`);
+                    active?.classList.add('text-primary');
+                }
+            })
+        }, { threshold: 0.6 });
+        sections.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) obs.observe(el);
+        });
+
+        // Dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Back to top
+        const toTop = document.getElementById('toTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) toTop.classList.remove('hidden');
+            else toTop.classList.add('hidden');
+        });
+        toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</body>
+
+</html>
